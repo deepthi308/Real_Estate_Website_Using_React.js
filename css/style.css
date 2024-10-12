@@ -1,0 +1,736 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Ysabeau+SC:wght@1..1000&display=swap");
+
+/* Root Variables To Store Colors */
+:root {
+  --GREY: rgba(0, 0, 0, 0.83);
+  --BLACK: black;
+  --WHITE: rgb(255, 255, 255);
+  --GREY-LIGHT: rgb(218, 218, 218);
+  --YELLOW-LIGHT: rgba(201, 131, 0, 0.384);
+  --YELLOW: rgb(201, 131, 0);
+  --YELLOW-TRANSPARENT: rgba(56, 36, 1, 0.556);
+}
+
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Literata", serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+button:hover {
+  transition: all 0.2s ease-in-out;
+  filter: brightness(110%);
+}
+
+.home-section {
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      var(--GREY),
+      var(--YELLOW-TRANSPARENT)
+    ),
+    url("../images/homeSectionBG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.properties-section {
+  height: max-content;
+  background-color: blue;
+}
+
+.agents-section {
+  height: max-content;
+  background-color: yellow;
+}
+
+.about-section {
+  height: 100vh;
+  background-color: orange;
+}
+.news-section {
+  height: max-content;
+  background-color: red;
+}
+
+.contact-section {
+  height: max-content;
+  background-color: cyan;
+}
+
+/* Styling For Home Section Begins Here */
+
+.nav-bar {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var(--WHITE);
+  border-bottom: 0.11rem solid var(--WHITE);
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-colored {
+  background-color: var(--YELLOW);
+}
+
+.nav-left {
+  flex: 5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.brand-name {
+  cursor: pointer;
+}
+
+.nav-right {
+  flex: 5;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--WHITE);
+}
+
+.nav-links li a::after {
+  content: "";
+  display: block;
+  height: 0.11rem;
+  width: 0%;
+  margin-top: 0.11rem;
+  border-radius: 1000px;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-text {
+  width: 40rem;
+  /* background-color: yellow; */
+  text-align: center;
+  color: var(--WHITE);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote {
+  line-height: 5rem;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.para {
+  line-height: 2rem;
+  font-size: 1.3rem;
+  text-wrap: wrap;
+}
+
+.how-it-works {
+  height: max-content;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+  background-color: var(--GREY-LIGHT);
+}
+
+.how-it-works > h2 {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--YELLOW);
+}
+
+.cards {
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+}
+
+.card {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.card i {
+  font-size: 1.8rem;
+  color: var(--YELLOW);
+}
+
+.card p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+/* Styling For Home Section Ends Here */
+
+/* Styling For Properties Section Begins Here */
+
+.properties-section {
+  background-color: var(--WHITE);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.properties-top {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.properties-top h2 {
+  font-size: 2rem;
+  color: var(--YELLOW);
+}
+
+.properties-bottom {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: max-content;
+}
+
+.property-cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+}
+
+.property-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  max-width: 30rem;
+  gap: 1rem;
+  background-color: var(--GREY-LIGHT);
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 0.11rem var(--GREY-LIGHT);
+}
+
+.card-top {
+  flex: 7;
+  object-fit: contain;
+}
+
+.card-top img {
+  width: 100%;
+}
+
+.card-bottom {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.price {
+  color: var(--YELLOW);
+}
+
+.card-bottom .sections {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.card-bottom .sections div {
+  border-right: 1px solid var(--GREY);
+  padding: 0rem 0.6rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-bottom .sections div:first-child {
+  padding-left: 0rem;
+}
+
+.address {
+  font-size: 1.1rem;
+}
+
+.property-listings {
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  padding: none;
+  cursor: pointer;
+  background-color: var(--YELLOW);
+  color: var(--WHITE);
+  letter-spacing: 1px;
+  font-family: "Literata", serif;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Styling For Properties Section Ends Here */
+
+/* Styling For Agents Section Begins Here */
+
+.agents-section h2 {
+  color: var(--YELLOW);
+  text-align: center;
+}
+
+.agents-para {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.agents-section {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--GREY-LIGHT);
+  overflow-y: scroll;
+}
+
+.agent-cards {
+  padding: 2rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 70%;
+  list-style-type: none;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-card {
+  width: 21rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-card-top {
+  flex: 5;
+}
+
+.agent-ocuppation {
+  color: var(--YELLOW);
+}
+
+.agent-card-top img {
+  height: 100%;
+  background-color: red;
+  width: 100%;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.agent-card-top img {
+  height: 100%;
+}
+
+.agent-card-bottom {
+  flex: 5;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background-color: yellow;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  background-color: var(--WHITE);
+}
+
+/* Styling For Agents Section Ends Here */
+
+/* Styling For About Section Begins Here */
+
+.about-section {
+  color: var(--YELLOW);
+  padding: 3rem 2rem;
+  background-color: var(--WHITE);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  height: max-content;
+}
+
+.about-content {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.content-left {
+  flex: 5;
+  object-fit: fill;
+  object-position: center;
+}
+
+.content-left img {
+  height: 100%;
+  width: 100%;
+}
+
+.content-right {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-title {
+  font-size: 2.3rem;
+  text-align: left;
+}
+
+.content-subtitle,
+.content-subtitle2 {
+  text-align: left;
+  color: var(--GREY);
+  font-size: 1.2rem;
+}
+
+.list {
+  list-style: disc;
+  color: var(--GREY);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.learn-more {
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  padding: none;
+  cursor: pointer;
+  background-color: var(--YELLOW);
+  color: var(--WHITE);
+  letter-spacing: 1px;
+  font-family: "Literata", serif;
+  cursor: pointer;
+  font-size: 1.1rem;
+  /* width: 10rem; */
+  align-self: center;
+}
+/* Styling For About Section Ends Here */
+
+/* Styling For News Section Begins Here */
+
+.news-section {
+  background-color: var(--GREY-LIGHT);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.news-section h2 {
+  color: var(--YELLOW);
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service {
+  display: flex;
+  width: 25rem;
+  background-color: var(--WHITE);
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 0.3rem;
+}
+
+.service-left {
+  flex: 2;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.3rem;
+  color: var(--YELLOW);
+}
+
+.service-right {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.service-right .learn-more2 {
+  background-color: transparent;
+  color: var(--YELLOW);
+  text-align: left;
+  padding: 0;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  border: none;
+  padding: none;
+  font-family: "Literata", serif;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Styling For News Section Ends Here */
+
+/* Styling For Testimonials Section Starts Here */
+
+.testimonials-section {
+  height: max-content;
+  background-color: var(--WHITE);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  color: var(--YELLOW);
+}
+
+.scroll-container {
+  height: 20rem;
+  width: 55rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+q {
+  font-size: 1.5rem;
+}
+
+.container-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26rem;
+  height: 9rem;
+  padding: 1rem;
+}
+
+.profile-left {
+  flex: 3;
+  object-fit: cover;
+}
+
+.profile-left img {
+  height: 100%;
+  width: 100%;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.profile-right {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.user-name {
+  color: var(--YELLOW);
+  font-size: 1.6rem;
+}
+
+.location {
+  font-size: 1.2rem;
+}
+
+.move-icons {
+  display: flex;
+  gap: 10rem;
+  font-size: 2rem;
+  color: var(--YELLOW);
+}
+
+.icon-left {
+  position: relative;
+  top: 50%;
+  left: 0%;
+  cursor: pointer;
+}
+
+.icon-right {
+  position: relative;
+  top: 50%;
+  left: 0%;
+  cursor: pointer;
+}
+
+/* Styling For Testimonials Section Ends Here */
+
+/* Styling For Contact Section Begins Here */
+
+.contact-section {
+  height: max-content;
+  background-color: var(--GREY-LIGHT);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: var(--YELLOW);
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  height: max-content;
+  gap: 3rem;
+}
+
+.contact-left {
+  flex: 5;
+  background-color: var(--WHITE);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.field-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.field-group label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 80%;
+  height: 3rem;
+  border: 0.1rem solid var(--YELLOW);
+  outline: none;
+  border-radius: 0.3rem;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+textarea {
+  resize: none;
+  padding-top: 1rem;
+  height: 6rem;
+}
+
+input:focus,
+textarea:focus {
+  border: 0.2rem solid var(--YELLOW);
+}
+
+.contact-right {
+  flex: 5;
+  background-color: var(--WHITE);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: max-content;
+}
+
+.address-section,
+.phone-section,
+.email-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-right p,
+a {
+  font-size: 1.2rem;
+  color: var(--YELLOW);
+}
+
+/* Styling For Contact Section Ends Here */
